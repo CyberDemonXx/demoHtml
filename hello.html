@@ -2,16 +2,48 @@
 <html>
 <body>
 
-<h1>Hello World!</h1>
+<style>
+  h1 {
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 30px #0073e6,
+                 0 0 40px #0073e6,
+                 0 0 50px #0073e6;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff,
+                   0 0 20px #fff,
+                   0 0 30px #0073e6,
+                   0 0 40px #0073e6;
+    }
+    to {
+      text-shadow: 0 0 20px #fff,
+                   0 0 30px #4da6ff,
+                   0 0 40px #4da6ff,
+                   0 0 60px #4da6ff;
+    }
+  }
+  
+  body {
+    background-color: #1a1a1a;
+  }
+</style>
+
+<h1>Hello World</h1>
 
 <p>This is my first website.</p>
-<h1></h1>Hype LInk!</h1>
+<h1>**/Hyper link</h1>
 <a href="https://www.w3schools.com/html/default.asp">HTML tutorial</a>
-<h1>Button OnClick!</h1>
-<button onclick="document.getElementById('demo').innerHTML=Date();">What is the time?</button>
-<h1>Image!</h1>
+
+<h1>Button OnClick</h1>
+<button onclick="getElementById('demo').innerHTML=Date();">*What is the time?</button>
+
+<h1>Image</h1>
 <img src="pic_trulli.jpg" alt="Italian Trulli">
 
-  
 </body>
 </html>
