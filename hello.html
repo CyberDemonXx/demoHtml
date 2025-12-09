@@ -4,7 +4,7 @@
 
 <style>
   h1 {
-    color: #ff;
+    color: white;
     text-shadow: 0 0 10px #fff,
                  0 0 20px #fff,
                  0 0 30px #0073e6,
@@ -30,20 +30,80 @@
   
   body {
     background-color: #00ff0a;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  #demo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    min-height: 40px;
+  }
+  
+  button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  a:hover {
+    background-color: #218838;
+    text-decoration: underline;
   }
 </style>
 
 <h1>Hello World</h1>
 
 <p>This is my first website.</p>
-<h1>**/Hyper link</h1>
+<h2>Hyper link</h2>
 <a href="https://www.w3schools.com/html/default.asp">HTML tutorial</a>
 
-<h1>Button OnClick</h1>
-<button onclick="document.getElementById('demo').innerHTML = Date();">What is the time?</button>
+<h2>Button OnClick</h2>
+<button onclick="showTime()">What is the time?</button>
 
-<h1>Image</h1>
-<img src="dog.jpg" alt="dog">
+<!-- Added this div to display the time -->
+<div id="demo">Click the button to see the time...</div>
+
+<h2>Image</h2>
+<img src="dog.jpg" alt="dog" onerror="this.style.display='none'">
+
+<script>
+function showTime() {
+  const now = new Date();
+  const timeString = now.toLocaleString();
+  document.getElementById('demo').innerHTML = "Current time: " + timeString;
+}
+</script>
 
 </body>
 </html>
